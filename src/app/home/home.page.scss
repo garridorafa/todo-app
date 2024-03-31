@@ -1,27 +1,40 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.container {
+  margin: 0 20px;
+  height: calc(100% - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.todo-card {
+  background-color: lavender;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 1px 8px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+h3 {
+  font-size: medium;
 }
 
-#container a {
-  text-decoration: none;
+.category {
+  opacity: 0.6;
+  span {
+    color: blueviolet;
+  }
+}
+
+.add-todo-input {
+  margin-top: 20px;
+  border: 1px solid #8484ed;
+  border-radius: 5px;
+  input {
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    :focus-visible {
+      border: none;
+    }
+  }
 }

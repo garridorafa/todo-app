@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Todo List </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,8 +11,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div id="container" class="container">
+    <div>
+      <div class="todo-card" *ngFor="let todo of todos">
+        <h3>{{todo.title}}</h3>
+        <p class="category">
+          {{todo.category.name}}
+          <span *ngIf="todo.dueAt">- {{ todo.dueAt }}</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="add-todo-input">
+      <input type="text" />
+    </div>
   </div>
 </ion-content>
